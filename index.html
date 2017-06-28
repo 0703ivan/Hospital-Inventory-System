@@ -1,0 +1,40 @@
+<?php require("config.php");?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/icon.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>KYAMBOGO MEDICAL CENTER</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+</head>
+<body>
+	<div class="container">
+		<img src="images/kyu.png">
+		
+		<form action="config.php" method="POST">
+			<div class="form-input">
+				<input class="input" type="text" name="username" placeholder="Username" required="required">
+			</div>
+			<div class="form-pass">
+				<input class="input" type="password" name="password" placeholder="Password" required="required">
+			</div>
+			<div>
+				<input type="submit" name="submit" value="LOGIN" class="btn btn-success btn-sm">
+			</div>
+			<?php if(isset($_GET["error"])):?>
+        		<!--<div class="error" style="color:rgb(200,0,0); ">Invalid Username or Password</div>-->
+    		<?php endif; ?>
+		</form>
+		<div class="footer" align="Center"> &copy 2017 by Mugerwa Ivan. All Rights Reserved</div>
+	</div>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
